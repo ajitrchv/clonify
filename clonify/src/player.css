@@ -1,0 +1,11 @@
+.player { 
+    display: grid;
+    height: 200vh;
+    background-color: rgb(0, 0, 0); 
+}
+
+.player > h1{
+    font-weight: 700px;
+    font-size: 220px;
+    color: white;
+}

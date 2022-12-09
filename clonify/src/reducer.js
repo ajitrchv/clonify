@@ -2,15 +2,21 @@ export const initialState = {
     user: null,
     playlists: [],
     playing: false,
-    item: null
+    item: null,
+    //this should be removed after dvlpmnt
+    token: "BQCnZFwtFaq1NzV_peKh5id-imTZtopyYbiqeqdQXPAXV9cVhDXCXQd9vNx1QO07grzztNllbjGkt2Viv2IalRnDYlRiiDoLJYgaT1NZHgBR0f-skT04Tn7p8RrKCOvmkEbjfmtPQ1j57Evvt2zRt8U6D0ecSf7DExTKuCZeo0o_XYIrLSGjRpeC7F_ATqGA_HNy8Pppn3SWShEScueISDXS"
 }
 
 const reducer = (state, action) => {
-    console.log(action);
+    console.log("This can define action",action);
     switch(action.type){
-        case 'SET_USER':return {
+        case "SET_USER":return {
             ...state,
             user: action.user
+        };
+        case "SET_TOKEN":return{
+            ...state,
+            token: action.token
         }
         default: 
     }

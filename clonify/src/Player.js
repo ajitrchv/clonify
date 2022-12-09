@@ -1,14 +1,22 @@
 import React from 'react'
 import './player.css'
+import Sidebar from './Sidebar'
+import Footer from './footer'
+import Body from './body'
+
 function Player(props) {
   return (
     <div className='player'>
-        <h1>
-            Welcome to Clonify {props.name}
-        </h1>
-        <h1>
+        <div className='player_body'>
+
+          <Sidebar />
+
+          <Body />
+
+        </div>
         
-        </h1>
+        <Footer/>
+
     </div>
   )
 }

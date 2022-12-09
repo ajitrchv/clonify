@@ -9,5 +9,5 @@ export const StateProvider = ({initialState, reducer, children }) => (
 );
 
 export const useDataLayerValue = 
-() => useContext();
+() => useContext(StateProviderContext);
 

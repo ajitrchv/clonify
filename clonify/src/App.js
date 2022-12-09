@@ -12,8 +12,8 @@ const Spotify = new SpotifyWebApi()
 function App() 
 {
   const [token, setToken] = useState(null);
-  const [uname,setUname] = useState('Default');
-  const [{}, dispatch] = useDataLayerValue();
+  // const [uname,setUname] = useState('Default');
+  const [{user}, dispatch] = useDataLayerValue();
 
   useEffect(()=>{
     const hash = getTokenFromUrl();
@@ -22,10 +22,14 @@ function App()
 
     if (_token) {
       setToken(_token);
+      
       Spotify.setAccessToken(_token)
       Spotify.getMe().then(user => {
-        console.log('user here >>>>',user)
-        setUname(user.display_name)
+        // console.log('user here >>>>',user)
+        dispatch({
+          type: 'SET_USER',
+          user: user,
+        });
       });
 
     }
@@ -33,12 +37,14 @@ function App()
     console.log('Token  here>>>>', token);
   },[]);
 
+  console.log("user >>>", user)
+
   return (
     <div className="App">
 
       {
         token ? (
-          <Player name={uname}/>
+          <Player />
         ):
         (
           <Login />

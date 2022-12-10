@@ -4,8 +4,14 @@ import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import SidebarOptions from './sidebar_options'
+import { useDataLayerValue } from './StateProvider';
 
 function sidebar() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [{playlists}, dispatch] = useDataLayerValue();
+  console.log("Playlists",playlists);
+
+
   return (
     <div className='sidebar'>
       <img src='https://i.ibb.co/F68818f/clonifylogo.png' alt="spotify logo" className='sidebar_logo'></img>
@@ -17,9 +23,13 @@ function sidebar() {
         PLAYLISTS
       </strong>
       <hr />
-      <SidebarOptions option='Malayalam'></SidebarOptions>
+      {playlists?.items?.map(playlist=>(
+        console.log("name>>>>>", playlist.name),
+        <SidebarOptions key={playlist.name} option={playlist.name}/>
+      )) }
+      
   </div>
-  )
+  );
 }
 
 export default sidebar

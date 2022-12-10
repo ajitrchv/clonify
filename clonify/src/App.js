@@ -35,7 +35,12 @@ function App()
           user: user,
         });
       });
-
+      Spotify.getUserPlaylists().then((playlists) =>{
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
+        })
+      })
     }
 
     // console.log('Token  here>>>>', token);

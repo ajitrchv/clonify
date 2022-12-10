@@ -1,0 +1,22 @@
+.SideBarOption {
+  display: flex;
+  color: #808080;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: 200ms color ease-in;
+}
+
+
+
+.SideBarOption:hover {
+    color: wheat;
+}
+
+.SideBarOption_Icon {
+    color: #808080;
+    height: 30px;
+    padding: 10px;
+}
+

@@ -1,6 +1,5 @@
 .player { 
     display: grid;
-    height: 200vh;
     background-color: rgb(249, 249, 249); 
 }
 

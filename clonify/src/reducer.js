@@ -4,8 +4,8 @@ export const initialState = {
     playing: false,
     item: null,
     //this should be removed after dvlpmnt
-    token: null,
-    // token: "BQCnZFwtFaq1NzV_peKh5id-imTZtopyYbiqeqdQXPAXV9cVhDXCXQd9vNx1QO07grzztNllbjGkt2Viv2IalRnDYlRiiDoLJYgaT1NZHgBR0f-skT04Tn7p8RrKCOvmkEbjfmtPQ1j57Evvt2zRt8U6D0ecSf7DExTKuCZeo0o_XYIrLSGjRpeC7F_ATqGA_HNy8Pppn3SWShEScueISDXS"
+    // token: null,
+    token: "BQCnZFwtFaq1NzV_peKh5id-imTZtopyYbiqeqdQXPAXV9cVhDXCXQd9vNx1QO07grzztNllbjGkt2Viv2IalRnDYlRiiDoLJYgaT1NZHgBR0f-skT04Tn7p8RrKCOvmkEbjfmtPQ1j57Evvt2zRt8U6D0ecSf7DExTKuCZeo0o_XYIrLSGjRpeC7F_ATqGA_HNy8Pppn3SWShEScueISDXS"
 }
 
 const reducer = (state, action) => {

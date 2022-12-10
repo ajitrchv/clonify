@@ -1,8 +1,67 @@
 .footer {
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
     bottom: 0;
     height: 65px;
-    width: 100%;
+    width: 95%;
+    padding: 20px;
+    border-radius: 0px 20px 0px 0px;
     color: rgb(255, 255, 255);
     background-color: rgb(39, 39, 39);
+    box-shadow: 10px;
+}
+
+.footer_left {
+    flex: 0.3;
+    display: flex;
+    align-items: center;
+    color:wheat;
+    width: 300px;
+}
+
+.footer_green{
+    color: #1ed15e;
+    transition: transform 300ms ease-out;
+}
+
+.footer_album_logo {
+    height:50px;
+    width:50px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+.footer_center{
+    flex: 0.4;
+    padding: 0 100px;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+
+}
+
+.footer_right {
+    flex: 0.3;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+
+}
+
+.footer_right * .MuiSlider-root {
+    color: #1ed15e
+}
+
+.footer_icon:hover,
+.footer_green:hover{
+    color: wheat;
+
+    transition: transform 300ms ease-in-out;
+
+    transform: scale(1.5) !important;
 }

@@ -1,4 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-diimport FavoriteIcon from '@mui/icons-material/Favorite';sable react-hooks/rules-of-hooks */
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import SongRow from './SongRow';
 import React from 'react'
 import './body.css'
 import Header from './Header';
@@ -20,7 +25,17 @@ function body({spotify}) {
       </div>
     </div>
     <div className='body_songs'>
-      <div className='body_icons'></div>
+      <div className='body_icons'>
+        <PlayCircleIcon className='body_shuffle'/>
+        <FavoriteIcon fontSize='large'/>
+        <MoreHorizIcon />
+      </div>
+        {
+          discover_weekly?.tracks.items.map((item)=>(
+          <SongRow track={item.track} />
+          ))
+        }
+        {console.log("Discoverweekly",discover_weekly)}
     </div>
     </div>
   )

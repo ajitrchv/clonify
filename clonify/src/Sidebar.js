@@ -24,7 +24,6 @@ function sidebar() {
       </strong>
       <hr />
       {playlists?.items?.map(playlist=>(
-        console.log("name>>>>>", playlist.name),
         <SidebarOptions key={playlist.name} option={playlist.name}/>
       )) }
       

@@ -21,13 +21,12 @@ function App()
     const _token = hash.access_token;
 
     if (_token) {
+      Spotify.setAccessToken(_token)
       dispatch({
         type: "SET_TOKEN",
         token: _token,
       })
       // setToken(_token);
-      
-      Spotify.setAccessToken(_token)
       Spotify.getMe().then(user => {
         // console.log('user here >>>>',user)
         dispatch({
@@ -40,11 +39,17 @@ function App()
           type: "SET_PLAYLISTS",
           playlists: playlists,
         })
-      })
+      });
+      Spotify.getPlaylist('37i9dQZEVXcHj8kbhIHUFZ')
+      .then(response => dispatch({
+      type: "SET_DISCOVER_WEEKLY",
+      discover_weekly: response,
     }
-
+    ));
+    }
+    
     // console.log('Token  here>>>>', token);
-  },[]);
+  },[token, dispatch]);
 
   // console.log("user >>>", user)
   // console.log("here what token is>>>", token)

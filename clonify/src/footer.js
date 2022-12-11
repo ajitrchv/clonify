@@ -14,7 +14,7 @@ function footer() {
     <div className='footer'>
 
     <div className='footer_left'>
-    <img src="https://instagram.fcok4-1.fna.fbcdn.net/v/t51.2885-19/317184916_849280796319444_2431899356081026483_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fcok4-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=DI1j4SVpggwAX-LBJeX&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfBVVfihQgB0CXMl2d2cHKzJ1-kE9t9LjfqaieBkLxzv4g&oe=63995F92&_nc_sid=8fd12b" alt="" className='footer_album_logo'></img>
+    <img src="" alt="" className='footer_album_logo'></img>
     <div className='footer_info'>
       <h4>Yeaaah Baby</h4>
       <p>Hardpope</p>

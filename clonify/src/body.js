@@ -10,6 +10,45 @@ import Header from './Header';
 import { useDataLayerValue } from './StateProvider';
 
 function body({spotify}) {
+
+  const playPlaylist = (id) => {
+    spotify
+      .play({
+        context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
+      })
+      .then((res) => {
+        spotify.getMyCurrentPlayingTrack().then((r) => {
+          dispatch({
+            type: "SET_ITEM",
+            item: r.item,
+          });
+          dispatch({
+            type: "SET_PLAYING",
+            playing: true,
+          });
+        });
+      });
+  };
+
+  const playSong = (id) => {
+    spotify
+      .play({
+        uris: [`spotify:track:${id}`],
+      })
+      .then((res) => {
+        spotify.getMyCurrentPlayingTrack().then((r) => {
+          dispatch({
+            type: "SET_ITEM",
+            item: r.item,
+          });
+          dispatch({
+            type: "SET_PLAYING",
+            playing: true,
+          });
+        });
+      });
+  };
+
   const [{ discover_weekly }, dispatch] = useDataLayerValue();
   console.log("discover weekly>>",discover_weekly)
   return (
